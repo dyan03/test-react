@@ -6,13 +6,19 @@ import './style.css'
 function SignUp(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-  
+    const [agree, setAgree]=useState(false);
+
     function validateForm() {
       return email.length > 0 && password.length > 0;
     }
   
     function handleSubmit(event) {
       event.preventDefault();
+    }
+
+    function handleCheckBox(e){
+        setAgree(!agree)
+        console.dir(agree)
     }
   
     return (
@@ -49,7 +55,7 @@ function SignUp(props) {
             <a href="#"> 약관 확인</a>
         </p>
         <p className="forgot-password text-right">
-            <input type="checkbox" className="custom-control-input" id="customCheck1"/>
+            <input type="checkbox" className="custom-control-input" id="customCheck1" checked={agree} onChange={handleCheckBox}/>
             <label className="custom-control-label" htmlFor="customCheck1">약관 동의</label>
         </p>                
         <button type="submit" className="btn btn-primary btn-block" style={{backgroundColor: 'darkgreen'}}>계좌등록</button>
