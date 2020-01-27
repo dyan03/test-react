@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 function MyNavbar(){
 return(
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Navbar.Brand href="home">서비스 이름</Navbar.Brand>
+    <Navbar.Brand href="/">서비스 이름</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
@@ -22,8 +22,8 @@ return(
         </NavDropdown>
         </Nav>
         <Nav>
-        {/* <Nav.Link href="signIn">로그인</Nav.Link> */}
-        <NavLink to= '/signIn'>로그인</NavLink>
+        <Nav.Link href="signIn">로그인</Nav.Link>
+        {/* <NavLink to='/signIn'>로그인</NavLink> */}
         {/* <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target={SignIn}>로그인</a> */}
         <Nav.Link eventKey={2} href="signUp">
             회원가입

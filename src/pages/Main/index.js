@@ -62,7 +62,6 @@ function Main(props){
     return(
 
         <div>
-        <MyNavbar/>
         <div style={{margin: '10px',}}>
         {Item.map(I => {
           return (
