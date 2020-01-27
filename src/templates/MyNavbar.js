@@ -25,9 +25,7 @@ return(
         <Nav.Link href="signIn">로그인</Nav.Link>
         {/* <NavLink to='/signIn'>로그인</NavLink> */}
         {/* <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target={SignIn}>로그인</a> */}
-        <Nav.Link eventKey={2} href="signUp">
-            회원가입
-        </Nav.Link>
+        <Nav.Link href="signUp">회원가입</Nav.Link>
         </Nav>
     </Navbar.Collapse>
     </Navbar>

@@ -1,7 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
 
-import MyNavbar from '../../templates/MyNavbar'
 import MyCard from '../../templates/MyCard/index'
 
 const Item = [
