@@ -4,16 +4,18 @@ import './style.css'
 // import 'bootstrap/dist/js/bootstrap.min.css'
 
 function SignUp(props) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [agree, setAgree]=useState(false);
+
 
     function validateForm() {
       return email.length > 0 && password.length > 0;
     }
   
     function handleSubmit(event) {
-      event.preventDefault();
+        console.log(email)
+
     }
 
     function handleCheckBox(e){
@@ -25,6 +27,8 @@ function SignUp(props) {
 
     }
   
+    
+
     return (
         <div className="layout">
         <form>
@@ -43,7 +47,7 @@ function SignUp(props) {
 
         <div className="form-group">
             <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" />
+            <input type="email" className="form-control" placeholder="Enter email" value={email}/>
         </div>
 
         <div className="form-group">
