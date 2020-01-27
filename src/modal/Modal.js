@@ -1,22 +1,35 @@
 import React from 'react';
-import './Modal.scss';
+import './Modal.css';
 
 const Modal = () => {
   return (
-    <React.Fragment>
-         <div className="Modal-overlay" />
-      <div className="Modal">
-        <p className="title">Modal Title</p>
-        <div className="content">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel tempora nulla, non molestiae dicta ducimus. Et unde laborum eveniet ex quod doloribus quae, aliquam beatae atque, vero assumenda rem quo?
-          </p>
-        </div>
-        <div className="button-wrap">
-          <button> Confirm </button>
-        </div>
+    <div>      
+      <div class="sidenav">
+         <div class="login-main-text">
+            <h2>Application<br/> Login Page</h2>
+            <p>Login or register from here to access.</p>
+         </div>
       </div>
-    </React.Fragment>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input type="text" class="form-control" placeholder="User Name"/>
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" placeholder="Password"/>
+                  </div>
+                  <button type="submit" class="btn btn-black">Login</button>
+                  <button type="submit" class="btn btn-secondary">Register</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      </div>
+
   )
 }
 export default Modal;
