@@ -60,7 +60,7 @@ function Main(props){
 
         <div>
         <MyNavbar/>
-        <div style={{margin: '10px', float:'left'}}>
+        <div style={{margin: '10px',}}>
         {Item.map(I => {
           return (
               <div style={{margin: '20px'}}>
