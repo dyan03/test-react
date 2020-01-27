@@ -55,9 +55,6 @@ const Item = [
 ]
 
 function Main(props){
-
-    
-
     return(
 
         <div>
