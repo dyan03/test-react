@@ -4,18 +4,29 @@ import './style.css'
 // import 'bootstrap/dist/js/bootstrap.min.css'
 
 function SignUp(props) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
     const [agree, setAgree]=useState(false);
 
 
     function validateForm() {
-      return email.length > 0 && password.length > 0;
+    //   return email.length > 0 && password.length > 0;
     }
   
-    function handleSubmit(event) {
+    function handleSubmitEmail(e) {
+        setEmail(e.target.value);
         console.log(email)
+    }
 
+    function handleSubmitPwd(e){
+        setPassword(e.target.value)
+        console.log(password)
+    }
+
+    function handleSubmitForm(event) {
+        console.log("제출결과")
+        console.log(email)
+        console.log(password)
     }
 
     function handleCheckBox(e){
@@ -23,11 +34,6 @@ function SignUp(props) {
         console.dir(agree)
     }
 
-    function handleSubmit(){
-
-    }
-  
-    
 
     return (
         <div className="layout">
@@ -47,17 +53,17 @@ function SignUp(props) {
 
         <div className="form-group">
             <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" value={email}/>
+            <input type="email" className="form-control" placeholder="Enter email" onChange={handleSubmitEmail}/>
         </div>
 
         <div className="form-group">
             <label>Password</label>
-            <input type="password" className="form-control" placeholder="Enter password" />
+            <input type="password" className="form-control" placeholder="Enter password"onChange={handleSubmitPwd} />
         </div>
 
         <div className="form-group">
             <label>Confirm password</label>
-            <input type="password" className="form-control" placeholder="Enter password" />
+            <input type="password" className="form-control" placeholder="Enter password" required/>
         </div>
         <p className="forgot-password text-right">
             <a href="#"> 약관 확인</a>
@@ -68,7 +74,7 @@ function SignUp(props) {
         </p>                
         <button type="submit" className="btn btn-primary btn-block" style={{backgroundColor: 'darkgreen'}}>계좌등록</button>
 
-        <button type="submit" className="btn btn-primary btn-block" onClick={handleSubmit}>Submit</button>
+        <button type="submit" className="btn btn-primary btn-block" onClick={handleSubmitForm}>Submit</button>
 
 
         </form>
