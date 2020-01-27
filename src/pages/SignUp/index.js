@@ -20,6 +20,10 @@ function SignUp(props) {
         setAgree(!agree)
         console.dir(agree)
     }
+
+    function handleSubmit(){
+
+    }
   
     return (
         <div className="layout">
@@ -60,7 +64,7 @@ function SignUp(props) {
         </p>                
         <button type="submit" className="btn btn-primary btn-block" style={{backgroundColor: 'darkgreen'}}>계좌등록</button>
 
-        <button type="submit" className="btn btn-primary btn-block">Submit</button>
+        <button type="submit" className="btn btn-primary btn-block" onClick={handleSubmit}>Submit</button>
 
 
         </form>
