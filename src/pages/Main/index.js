@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid';
 
 import MyCard from '../../templates/MyCard/index'
+import Banner from '../../templates/Banner/index'
 
 const Item = [
   {
@@ -55,13 +56,11 @@ const Item = [
 ]
 
 function Main(props){
-
-    
-
     return(
 
         <div>
         <div style={{margin: '10px',}}>
+        <Banner/>
         {Item.map(I => {
           return (
               <div style={{margin: '20px'}}>

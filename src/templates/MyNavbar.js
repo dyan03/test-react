@@ -1,11 +1,20 @@
-import React from 'react'
+import React, {Fragment, useState} from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { NavLink } from 'react-router-dom';
+import RootRouter from '../routers/RootRouter'
 
 function MyNavbar(){
+
+    const [login, setLogin]=useState(false);
+
+    function handleSubmit(){
+        setLogin(!login)
+    }
+
 return(
+    <Fragment>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Navbar.Brand href="/">서비스 이름</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,13 +31,23 @@ return(
         </NavDropdown>
         </Nav>
         <Nav>
-        <Nav.Link href="signIn">로그인</Nav.Link>
-        {/* <NavLink to='/signIn'>로그인</NavLink> */}
-        {/* <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target={SignIn}>로그인</a> */}
-        <Nav.Link href="signUp">회원가입</Nav.Link>
+            { 
+            login
+            ?
+            <div style ={{display:'flex'}}>
+                <Nav.Link href="signIn">로그인</Nav.Link>
+                <Nav.Link href="signUp">회원가입</Nav.Link>
+            </div>
+            :
+            <Nav.Link href="signUp">회원가입</Nav.Link>
+
+            }
+        <button type="submit" style={{width:100, height:30}} onClick={handleSubmit}>check</button>
         </Nav>
     </Navbar.Collapse>
     </Navbar>
+    <RootRouter/>
+    </Fragment>
     )
 }
 

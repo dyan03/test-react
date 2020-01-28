@@ -10,11 +10,12 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import RootRouter from './routers/RootRouter'
 import MyNavbar from './templates/MyNavbar'
+
+
 function App() {
   return (
     <BrowserRouter>
       <MyNavbar/>
-      <RootRouter/>
     </BrowserRouter>
   )
 }
